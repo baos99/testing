@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>es.sanitas.videoconsultation</groupId>
+    <artifactId>gitleaks-demo</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <parent>
+        <groupId>es.sanitas.arquitectura.bravocloud</groupId>
+        <artifactId>bravocloud-parent-app</artifactId>
+        <version>[10.0.0,11.0.0)</version>
+    </parent>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- App modules -->
+            <dependency>
+                <groupId>es.sanitas.videoconsultation</groupId>
+                <artifactId>gitleaks-demo-persistence</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>es.sanitas.videoconsultation</groupId>
+                <artifactId>gitleaks-demo-services</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>es.sanitas.videoconsultation</groupId>
+                <artifactId>gitleaks-demo-application</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <modules>
+        <module>gitleaks-demo-application</module>
+        <module>gitleaks-demo-services</module>
+        <module>gitleaks-demo-persistence</module>
+    </modules>
+
+    <!-- =========== REPOSITORIES =========== -->
+    <repositories>
+        <repository>
+            <id>Sanitas</id>
+            <url>http://ic.sanitas.dom/nexus/repository/Sanitas/</url>
+        </repository>
+    </repositories>
+
+</project>
