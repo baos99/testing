@@ -20,4 +20,10 @@
         </dependency>
     </dependencies>
 
+    <server>
+      <id>my.server</id>
+      <username>foo</username>
+      <password>{COQLCE6DU6GtcS5P=}</password>
+    </server>
+
 </project>

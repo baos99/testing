@@ -46,3 +46,8 @@ sanitas:
     batch:
       admin:
         enabled: true
+
+credentials:
+  username: "hanauser"
+  password: "c29tZXJhbmRvbXBhc3N3b3Jk"
+  password_type: base64
